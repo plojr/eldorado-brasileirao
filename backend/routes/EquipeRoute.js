@@ -1,5 +1,5 @@
-const EquipeController = require('../controllers/EquipeController');
-var router = require('express').Router();
+const EquipeController = require("../controllers/EquipeController");
+var router = require("express").Router();
 
 router.get("/equipes", EquipeController.get);
 router.post("/equipe", EquipeController.post);
