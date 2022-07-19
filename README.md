@@ -1,5 +1,7 @@
 # Eldorado - Brasileirão
 
+Status: em desenvolvimento.
+
 ## Resumo
 Este projeto visa mostrar várias estatísticas do campeonato brasileiro. Ele tem propósito de aprendizado somente.
 
