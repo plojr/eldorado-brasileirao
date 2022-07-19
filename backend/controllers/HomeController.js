@@ -1,3 +1,5 @@
+const httpStatus = require("http-status-codes");
+
 exports.get = async (req, res, next) => {
-    res.status(200).send({"mensagem": "Bem vindo ao Eldorado!"});
+    res.status(httpStatus.StatusCodes.OK).send({"mensagem": "Bem vindo ao Eldorado!"});
 }

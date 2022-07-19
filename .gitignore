@@ -1,1 +1,6 @@
 /backend/node_modules
+/frontend/node_modules
+/frontend/README.md
+/frontend/npm_start.sh
+/frontend/public/robots.txt
+/frontend/.gitignore
