@@ -6,7 +6,7 @@ import Equipe from "./Pages/Equipe";
 
 function Rotas() {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/eldorado">
             <Routes>
                 <Route element={<Home />} path="/" exact />
                 <Route element={<Equipe />} path="/equipes" />

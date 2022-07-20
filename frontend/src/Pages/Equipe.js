@@ -1,6 +1,7 @@
 import { useState, React, useEffect } from "react";
 import Sidebar from "./Sidebar";
 import axios from "axios";
+import EquipeForm from "../Forms/EquipeForm";
 
 const baseURL = "http://localhost:8081/eldorado/api/v1/equipes";
 
@@ -17,16 +18,22 @@ function Equipe() {
 	        <div className="row flex-nowrap">
                 <Sidebar />
                 <div className="col py-3">
+                    <EquipeForm />
+                    <div>Equipes existentes</div>
                     <table className="table table-bordered">
-                        <tr>
-                            <th>Nome</th>
-                            <th>Apelido</th>
-                        </tr>
-                        {equipes.map(equipe => 
-                            <tr key={equipe.id}>
-                                <td>{equipe.nome}</td>
-                                <td>{equipe.apelido}</td>
-                            </tr>)}
+                        <tbody>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Apelido</th>
+                            </tr>
+                        </tbody>
+                        {equipes.map(equipe =>
+                            <tbody key={equipe.id}> 
+                                <tr>
+                                    <td>{equipe.nome}</td>
+                                    <td>{equipe.apelido}</td>
+                                </tr>
+                            </tbody>)}
                     </table>
                 </div>
             </div>

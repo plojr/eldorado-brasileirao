@@ -1,9 +1,10 @@
 const EquipeModel = require("../models/Equipe");
 const httpStatus = require("http-status-codes");
+const EquipeService = require("../services/EquipeService");
 
 exports.get = async (req, res) => {
     const equipes = await EquipeModel.find();
-    res.status(httpStatus.StatusCodes.OK).send(equipes);
+    res.status(httpStatus.StatusCodes.OK).send(EquipeService.tratarNomeEquipes(equipes));
 };
 
 exports.post = async (req, res) => {
