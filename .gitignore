@@ -4,3 +4,4 @@
 /frontend/npm_start.sh
 /frontend/public/robots.txt
 /frontend/.gitignore
+/backend-python/__pycache__
