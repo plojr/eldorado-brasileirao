@@ -1,8 +1,6 @@
-/backend-nodejs/node_modules
+/backend/node_modules
 /frontend/node_modules
 /frontend/README.md
 /frontend/npm_start.sh
 /frontend/public/robots.txt
 /frontend/.gitignore
-/**/__pycache__
-/backend-python/teste.py
