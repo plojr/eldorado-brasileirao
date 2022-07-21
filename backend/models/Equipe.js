@@ -5,14 +5,7 @@ const EquipeSchema = new Schema({
     type: String,
     required: true,
     unique: true
-  },
-  apelido: {
-    type: String,
-    required: false,
   }
-}, 
-{
-  timestamps: false,
 });
  
 module.exports = model('Equipes', EquipeSchema);
