@@ -1,5 +1,5 @@
 import { useState, React, useEffect } from "react";
-import Sidebar from "./Sidebar";
+import SidebarPage from "./SidebarPage";
 import axios from "axios";
 import EquipeForm from "../Forms/EquipeForm";
 
@@ -16,7 +16,7 @@ function Equipe() {
     return(
         <div className="container-fluid">
 	        <div className="row flex-nowrap">
-                <Sidebar />
+                <SidebarPage />
                 <div className="col py-3">
                     <EquipeForm />
                     <div>Equipes existentes</div>
@@ -24,14 +24,12 @@ function Equipe() {
                         <tbody>
                             <tr>
                                 <th>Nome</th>
-                                <th>Apelido</th>
                             </tr>
                         </tbody>
                         {equipes.map(equipe =>
                             <tbody key={equipe.id}> 
                                 <tr>
                                     <td>{equipe.nome}</td>
-                                    <td>{equipe.apelido}</td>
                                 </tr>
                             </tbody>)}
                     </table>

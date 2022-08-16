@@ -6,6 +6,7 @@ const GolSchema = new Schema({
 });
 
 const PartidaSchema = new Schema({
+  rodada: {Number},
   mandante: {
       nome: String,
       gols: [GolSchema]

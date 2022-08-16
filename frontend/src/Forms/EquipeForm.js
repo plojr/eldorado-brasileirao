@@ -9,14 +9,13 @@ function EquipeForm() {
         setCampos(campos);
     }
     const [campos, setCampos] = useState({
-        nome: '',
-        apelido: ''
+        nome: ''
     });
     function salvarEquipe(event){
         event.preventDefault();
         axios.post(baseURL, campos).then(response => {
             alert("Equipe cadastrada!");
-            window.location.href = "/equipes";
+            window.location.href = "equipes";
         });
     }
     return (
@@ -28,10 +27,7 @@ function EquipeForm() {
                             <label htmlFor="equipe_nome_id">Nome da equipe</label>
                             <input type="text" id="equipe_nome_id" name="nome" className="form-control" required onChange={handleInputChange} />
                         </div>
-                        <div className="form-group">
-                            <label htmlFor="equipe_apelido_id">Apelido da equipe</label>
-                            <input type="text" id="equipe_apelido_id" name="apelido" className="form-control" required onChange={handleInputChange} />
-                        </div>
+                        <br />
                         <button type="submit" className="btn btn-primary btn-sm">Salvar</button>
                     </form>
                 </div>

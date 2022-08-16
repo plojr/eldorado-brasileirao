@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Sidebar from "./Sidebar";
+import SidebarPage from "./SidebarPage";
 import axios from "axios";
 
 const baseURL = "http://localhost:8081/eldorado/api/v1/";
@@ -14,7 +14,7 @@ function Home() {
     return (
         <div className="container-fluid">
 	        <div className="row flex-nowrap">
-                <Sidebar />
+                <SidebarPage />
                 <div className="col py-3">
                     <p>{mensagem.mensagem}</p>
                 </div>

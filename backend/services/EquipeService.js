@@ -9,3 +9,10 @@ exports.tratarNomeEquipes = (equipes) => {
     });
     return equipes;
 }
+
+exports.ordenarEquipesPorNome = (equipes) => {
+    return equipes.sort(function(a, b) {
+        var x = a["nome"]; var y = b["nome"];
+        return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+    });
+}
