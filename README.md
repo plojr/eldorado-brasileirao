@@ -3,7 +3,7 @@
 Status: em desenvolvimento.
 
 ## Resumo
-Este projeto visa mostrar várias várias estatísticas interessante do campeonato brasileiro. Ele tem propósito de aprendizado somente.
+Este projeto visa mostrar várias várias estatísticas interessantes do campeonato brasileiro. Ele tem propósito de aprendizado somente.
 
 ## Informações técnicas
 Este projeto contém dois módulos: o backend, onde trata a API para a comunicação com o banco de dados; e o frontend. Para desenvolver a API, foi utilizado o node.js. Para o frontend, foi utilizado o react. O banco de dados escolhido foi o MongoDB.
