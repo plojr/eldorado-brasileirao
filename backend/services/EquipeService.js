@@ -1,5 +1,12 @@
 exports.tratarNomeEquipe = (equipe) => {
-    equipe.nome = equipe.nome.charAt(0).toUpperCase() + equipe.nome.slice(1);
+    const tokensEspaco = equipe.nome.split(" ");
+    equipe.nome = "";
+    tokensEspaco.forEach(tok => {
+        equipe.nome += tok.charAt(0).toUpperCase() + tok.slice(1).toLowerCase() + " ";
+    });
+    let posTraco = equipe.nome.indexOf("-");
+    if(posTraco != -1)
+        equipe.nome = equipe.nome.substring(0, posTraco) + equipe.nome.slice(posTraco).toUpperCase();
     return equipe;
 }
 
@@ -12,7 +19,8 @@ exports.tratarNomeEquipes = (equipes) => {
 
 exports.ordenarEquipesPorNome = (equipes) => {
     return equipes.sort(function(a, b) {
-        var x = a["nome"]; var y = b["nome"];
+        var x = a["nome"];
+        var y = b["nome"];
         return ((x < y) ? -1 : ((x > y) ? 1 : 0));
     });
 }
