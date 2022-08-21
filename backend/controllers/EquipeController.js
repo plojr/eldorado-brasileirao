@@ -9,6 +9,7 @@ exports.get = async (req, res) => {
 };
 
 exports.post = async (req, res) => {
+    console.log(req);
     try {
         req.body.nome = req.body.nome.toLowerCase();
         const equipe = await EquipeModel.create({...req.body});
@@ -20,7 +21,7 @@ exports.post = async (req, res) => {
 
 exports.delete = async (req, res) => {
     try {
-        await EquipeModel.deleteOne({nome: req.params.nome.toLowerCase()});
+        await EquipeModel.deleteOne({_id: req.params.id});
         res.status(httpStatus.StatusCodes.NO_CONTENT).send({deleted: true});
     } catch(error) {
         res.status(httpStatus.StatusCodes.CONFLICT).send({mensagem: "Erro ao deletar equipe. Esta equipe existe no banco de dados?."});

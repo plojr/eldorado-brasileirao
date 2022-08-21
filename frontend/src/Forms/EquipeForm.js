@@ -25,7 +25,7 @@ function EquipeForm() {
                     <form onSubmit={salvarEquipe}>
                         <div className="form-group">
                             <label htmlFor="equipe_nome_id">Nome da equipe</label>
-                            <input type="text" id="equipe_nome_id" name="nome" className="form-control" required onChange={handleInputChange} />
+                            <input autoFocus type="text" id="equipe_nome_id" name="nome" className="form-control" required onChange={handleInputChange} />
                         </div>
                         <br />
                         <button type="submit" className="btn btn-primary btn-sm">Salvar</button>
