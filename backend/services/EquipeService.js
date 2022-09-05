@@ -7,6 +7,7 @@ exports.tratarNomeEquipe = (equipe) => {
     let posTraco = equipe.nome.indexOf("-");
     if(posTraco != -1)
         equipe.nome = equipe.nome.substring(0, posTraco) + equipe.nome.slice(posTraco).toUpperCase();
+    equipe.nome = equipe.nome.trim();
     return equipe;
 }
 
