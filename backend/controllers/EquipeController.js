@@ -9,7 +9,6 @@ exports.get = async (req, res) => {
 };
 
 exports.post = async (req, res) => {
-    console.log(req);
     try {
         req.body.nome = req.body.nome.toLowerCase();
         const equipe = await EquipeModel.create({...req.body});
@@ -18,6 +17,10 @@ exports.post = async (req, res) => {
         res.status(httpStatus.StatusCodes.CONFLICT).send({mensagem: "Erro ao inserir equipe. Esta equipe já existe?"});
     }
 };
+
+exports.put = async (req, res) => {
+    await EquipeModel.findOneAndUpdate({_id: req.body._id}, {nome: req.body.nome.toLowerCase()});
+}
 
 exports.delete = async (req, res) => {
     try {

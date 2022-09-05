@@ -11,7 +11,8 @@ function toggleEditar(id) {
 }
 
 function salvarEquipe(equipe) {
-    alert(equipe._id + " " + equipe.nome);
+    axios.put(baseURL + "equipe", equipe);
+    document.getElementById(equipe._id).disabled = !document.getElementById(equipe._id).disabled;
 }
 
 function Equipe() {
